@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HiTech.NET- AOC 24B1XHS </title>
+	<meta property="og:description"
+		content="Un écran Full HD et sans bords, c'est sûrement votre futur moniteur pour la maison ou le bureau. Cet écran WLED très fonctionnel offre un contenu avec un fréquence de 60 Hz, idéal pour tous les usages du quotidien." />
+	<meta property="og:title" content="HiTech.NET- AOC 24B1XHS" />
+	<meta property="og:image" content="https://www.hitech.net.com/images/product-1/slide-1-md.jpg" />
+	<link rel="shortcut icon" href="/FRONT/images/logo.svg" type="image/svg+xml">
+	<meta property="og:url" content="https://www.hitech.net.com/products-empty.html" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="HiTech.NET" />
+	<meta property="og:locale" content="fr_FR" />
+	<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'
+		integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
+	<link rel="stylesheet" href="/assets/css/font-face.css">
+	<style>
+		.dark-mode .bg-light {
+			background-color: #333 !important;
+			color: white !important;
+
+		}
+
+		.dark-mode .text-muted {
+			color: #999 !important;
+		}
+		.white .bg-light {
+			color: var(--bs-dark) !important;
+		}
+
+		.white .navbar-dark .navbar-nav .nav-link {
+			color: var(--bs-dark) !important;
+		}
+	</style>
+</head>
+
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ps-1 align-items-center">
+		<button class="navbar-toggler ms-3" type="button" data-toggle="collapse" data-target="#navbar-1"
+			aria-controls="navbar-1" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="index.html">
+			<img src="/FRONT/images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt=""
+				loading="lazy">
+			HiTech.NET
+		</a>
+		<div class="collapse navbar-collapse container-fluid d-flex align-items-start flex-column flex-md-row align-items-md-start mt-3"
+			id="dropdown">
+			<h1 class="navbar-text h2">Gestion des produits</h1>
+			<ul class="navbar-nav ml-auto mr-5">
+				<div class="dropdown pe-3">
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<img alt="Avatar de Bob" src="/FRONT/images/avatar.png" width="48">
+						<strong>Bob</strong>
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown">
+						<li>
+							<a class="dropdown-item" href="#"><i class="fa fa-user"></i> Mon compte</a>
+
+						</li>
+						<li>
+							<a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Aide</a>
+
+						</li>
+
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Déconnexion</a>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<aside class="col-md-3 p-3 d-none d-md-block bg-light">
+				<h4 class="my-4 text-muted"><i class="fa fa-home"></i> Accueil</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Tableau de bord</a>
+				</nav>
+				<h4 class="my-4 text-muted"><i class="fa fa-globe"></i>Site web</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Gestion des rubriques</a>
+					<a class="nav-item nav-link" href="#">Gestion des actualités</a>
+				</nav>
+				<h4 class="my-4 text-muted"><i class="fa fa-shopping-basket"></i> Boutique</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Gestion des rayons</a>
+					<a class="nav-item nav-link active" href="products.html">Gestion des produits</a>
+					<a class="nav-item nav-link" href="#">Gestion des commandes</a>
+				</nav>
+				<h4 class="my-4 text-muted"><i class="fa fa-cogs"></i> Paramètres</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Gestion des utilisateurs</a>
+					<a class="nav-item nav-link" href="#">Gestion des rôles</a>
+					<a class="nav-item nav-link" href="#">Préférences</a>
+				</nav>
+			</aside>
+			<main class="col-md-9 p-3">
+				<button class="btn btn-outline-secondary" id="dark-mode">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-app-indicator" viewBox="0 0 16 16">
+						<path
+							d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z" />
+						<path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+					</svg>
+				</button>
+				<form>
+					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center my-4">
+						<a class="btn btn-outline-secondary mb-2 mb-md-0" href="products.html"><i
+								class="fa fa-times"></i> Annuler
+							les modifications</a>
+						<button class="btn btn-primary"><i class="fa fa-check"></i> Valider et enregistrer la
+							fiche</button>
+					</div>
+					<fieldset class="p-3 bg-light">
+						<legend>Gestion</legend>
+						<div class="form-group row">
+							<div class="col-form-label col-sm-3 pt-0">Statut</div>
+							<div class="col-sm-9">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="product_status_draft"
+										name="product_status" value="draft" checked>
+									<label class="form-check-label text-muted" for="product_status_draft">En attente de
+										mise en ligne</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="product-status-stock"
+										name="product_status" value="ok">
+									<label class="form-check-label text-success" for="product-status-stock">En
+										boutique</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="product-status-delected"
+										name="product_status" value="off">
+									<label class="form-check-label text-danger"
+										for="product-status-delected">Retiré</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="chose-store" class="col-sm-3 col-form-label">Boutique</label>
+							<div class="col-sm-9">
+								<select class="form-control" id="chose-store" name="chose-store">
+									<option value="0">Choisir une boutique ...</option>
+									<option value="1">Ordinateurs</option>
+									<option value="2">Péripheriques &amp; composants</option>
+									<option value="3">Téléphones</option>
+									<option value="4">Objets connectés</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="chose-shelves" class="col-sm-3 col-form-label">Rayon</label>
+							<div class="col-sm-9">
+								<select class="form-control" id="chose-shelves" name="chose-shelves">
+									<option value="0">Choisir un rayon ...</option>
+									<option value="2-1">Ecrans d'ordinateur</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="p-3 bg-light">
+						<legend>Présentation</legend>
+						<div class="form-group row">
+							<label for="product-brand" class="col-sm-3 col-form-label">Marque</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="product-brand" name="product-brand"
+									value="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="reference-materials" class="col-sm-3 col-form-label">Référence du
+								produit</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="reference-materials"
+									name="reference-materials" value="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="product-tags" class="col-sm-3 col-form-label">Etiquettes</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="product-tags" name="product-tags" value="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="product-price" class="col-sm-3 col-form-label">Prix</label>
+							<div class="col-sm-9">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text">Prix</span>
+									</div>
+									<input type="number" class="form-control" id="product-price" name="product-price"
+										value="">
+									<div class="input-group-append">
+										<span class="input-group-text">€</span>
+									</div>
+									<div class="input-group-prepend">
+										<span class="input-group-text">éco-participation</span>
+									</div>
+									<input type="number" class="form-control" name="price-devise" value="">
+									<div class="input-group-append">
+										<span class="input-group-text">€</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="description-product" class="col-sm-3 col-form-label">Description principale
+								(MarkDown)</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" id="description-product" name="description-product"
+									rows="20"></textarea>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="p-3 bg-light">
+						<legend>Photos</legend>
+						<div class="form-group row">
+							<label for="picture-product-number-1" class="col-sm-3 col-form-label">Photo 1</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="picture-product-number-1"
+										name="picture-product-number-1">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="picture-product-number-2" class="col-sm-3 col-form-label">Photo 2</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="picture-product-number-2"
+										name="picture-product-number-2">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="picture-product-number-3" class="col-sm-3 col-form-label">Photo 3</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="picture-product-number-3"
+										name="picture-product-number-3">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="picture-product-number-4" class="col-sm-3 col-form-label">Photo 4</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="picture-product-number-4"
+										name="picture-product-number-4">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="picture-product-number-5" class="col-sm-3 col-form-label">Photo 5</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="picture-product-number-5"
+										name="picture-product-number-5">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="p-3 bg-light">
+						<legend>Descriptif 1</legend>
+						<div class="form-group row">
+							<label for="product-title-1" class="col-sm-3 col-form-label">Titre</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="product-title-1" name="product-title-1"
+									value="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="upload-file-1" class="col-sm-3 col-form-label">Image</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="upload-file-1"
+										name="upload-file-1">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="description-1" class="col-sm-3 col-form-label">Texte</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" id="description-1" name="description-1"
+									rows="12"></textarea>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="p-3 bg-light">
+						<legend>Descriptif 2</legend>
+						<div class="form-group row">
+							<label for="product-title-2" class="col-sm-3 col-form-label">Titre</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="product-title-2" name="product-title-2"
+									value="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="upload-file-2" class="col-sm-3 col-form-label">Image</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="upload-file-2"
+										name="upload-file-2">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="description-2" class="col-sm-3 col-form-label">Texte</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" id="description-2" name="description-2"
+									rows="12"></textarea>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="p-3 bg-light">
+						<legend>Descriptif 3</legend>
+						<div class="form-group row">
+							<label for="product-title-3" class="col-sm-3 col-form-label">Titre</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="product-title-3" name="product-title-3"
+									value="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="upload-file-3" class="col-sm-3 col-form-label">Image</label>
+							<div class="col-sm-9">
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="upload-file-3"
+										name="upload-file-3">
+									<label class="custom-file-label" for="form_control_file"
+										data-browse="Parcourir">Choisir un fichier</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="description-3" class="col-sm-3 col-form-label">Texte</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" id="description-3" name="description-3"
+									rows="12"></textarea>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</main>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
+		integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL'
+		crossorigin='anonymous'></script>
+	<script>
+		$(document).ready(function () {
+			var d = new Date();
+			var n = d.getHours();
+
+			if (n > 17 || n < 8) {
+				$("body").addClass("dark-mode");
+			} else {
+			}
+			let click = 0;
+			$('#dark-mode').click(function () {
+				if (click == 0) {
+					$("body").addClass("dark-mode");
+					$("#dark-mode").addClass("white");
+					click = 1;
+
+				}
+				else {
+					$("body").removeClass("dark-mode");
+					$("#dark-mode").removeClass("white");
+					click = 0;
+				}
+			});
+		});
+
+
+
+
+	</script>
+</body>
+
+</html>

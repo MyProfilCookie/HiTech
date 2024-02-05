@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 1rem = 10px */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+	transition: background-color 0.5s ease;
+}
+.container {
+	width: auto;
+	max-width: var(--max-width);
+	margin: 0 auto;
+}
+
+/* Clearfix
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+} */
+
+/* unstyled */
+ol.unstyled,
+ul.unstyled {
+	padding: 0;
+	list-style: none;
+}
+
+/* hidden */
+.hidden {
+	display: none;
+}

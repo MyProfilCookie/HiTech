@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HiTech.NET- AOC 24B1XHS </title>
+	<meta property="og:description"
+		content="Un écran Full HD et sans bords, c'est sûrement votre futur moniteur pour la maison ou le bureau. Cet écran WLED très fonctionnel offre un contenu avec un fréquence de 60 Hz, idéal pour tous les usages du quotidien." />
+	<meta property="og:title" content="HiTech.NET- AOC 24B1XHS" />
+	<meta property="og:image" content="https://www.hitech.net.com/images/product-1/slide-1-md.jpg" />
+	<link rel="shortcut icon" href="/FRONT/images/logo.svg" type="image/svg+xml">
+	<meta property="og:url" content="https://www.hitech.net.com/products.html" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="HiTech.NET" />
+	<meta property="og:locale" content="fr_FR" />
+	<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'
+		integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
+	<link rel="stylesheet" href="/assets/css/font-face.css">
+	<style>
+		.dark-mode {
+			background-color: #444 !important;
+			color: white !important;
+
+		}
+		.dark-mode aside {
+			background-color: #444 !important;
+		}
+
+		.dark-mode .text-muted {
+			color: #999 !important;
+		}
+
+		.white .bg-light {
+			color: var(--bs-dark) !important;
+		}
+
+		.white .navbar-dark .navbar-nav .nav-link {
+			color: var(--bs-dark) !important;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ps-1 align-items-center">
+		<button class="navbar-toggler ms-3" type="button" data-toggle="collapse" data-target="#navbar-1"
+			aria-controls="navbar-1" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="index.html">
+			<img src="/FRONT/images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt=""
+				loading="lazy">
+			HiTech.NET
+		</a>
+		<div class="collapse navbar-collapse container-fluid d-flex align-items-start flex-column flex-md-row align-items-md-start mt-3"
+			id="dropdown">
+			<h1 class="navbar-text h2">Gestion des produits</h1>
+			<ul class="navbar-nav ml-auto mr-5">
+				<div class="dropdown pe-5">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<img alt="Avatar de Bob" src="/FRONT/images/avatar.png" width="48">
+						<strong>Bob</strong>
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown">
+						<li>
+							<a class="dropdown-item" href="#"><i class="fa fa-user"></i> Mon compte</a>
+
+						</li>
+						<li>
+							<a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Paramètres</a>
+
+						</li>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Déconnexion</a>
+					</ul>
+				</div>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<aside class="col-md-3 p-3 d-none d-md-block bg-light">
+				<h4 class="my-4 text-muted"><i class="fa fa-home"></i> Accueil</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Tableau de bord</a>
+				</nav>
+				<h4 class="my-4 text-muted"><i class="fa fa-globe"></i> Site web</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Gestion des rubriques</a>
+					<a class="nav-item nav-link" href="#">Gestion des actualités</a>
+				</nav>
+				<h4 class="my-4 text-muted"><i class="fa fa-shopping-basket"></i> Boutique</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Gestion des rayons</a>
+					<a class="nav-item nav-link active" href="products.html">Gestion des produits</a>
+					<a class="nav-item nav-link" href="#">Gestion des commandes</a>
+				</nav>
+				<h4 class="my-4 text-muted"><i class="fa fa-cogs"></i> Paramètres</h4>
+				<nav class="nav nav-pills flex-column">
+					<a class="nav-item nav-link" href="#">Gestion des utilisateurs</a>
+					<a class="nav-item nav-link" href="#">Gestion des rôles</a>
+					<a class="nav-item nav-link" href="#">Préférences</a>
+				</nav>
+			</aside>
+			<main class="col-md-9 p-3">
+				<button class="btn btn-outline-secondary" id="dark-mode">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-app-indicator" viewBox="0 0 16 16">
+						<path
+							d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1z" />
+						<path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+					</svg>
+				</button>
+				<div class="d-flex justify-content-between flex-wrap align-items-center my-4">
+					<form class="d-flex flex-column flex-md-row mb-2">
+						<input class="form-control me-2 mb-2 mb-md-0" type="search" placeholder="" aria-label="Search">
+						<button class="btn btn-outline-secondary" type="submit">Rechercher</button>
+					</form>
+					<a class="btn btn-primary" href="product-empty.html"><i class="fa fa-plus"></i> Ajouter un
+						produit</a>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped">
+						<thead class="thead-dark">
+							<tr>
+								<th>Statut</th>
+								<th>Boutique</th>
+								<th>Rayon</th>
+								<th>Produit</th>
+								<th class="text-right">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-success">En boutique</td>
+								<td>Péripheriques & composants</td>
+								<td>Ecrans d'ordinateur</td>
+								<td>AOC 24B1XHS</td>
+								<td class="text-right">
+									<a class="btn btn-sm btn-outline-danger" data-bs-toggle="modal"
+										data-bs-target="#deleteModal" href="#"><i class="fa fa-archive"></i> Retirer</a>
+									<a class="btn btn-sm btn-outline-secondary" href="products.html"><i
+											class="fa fa-pencil"></i> Modifier</a>
+									<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i>
+										Caractéristiques</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-success">En boutique</td>
+								<td>Péripheriques & composants</td>
+								<td>Ecrans d'ordinateur</td>
+								<td>AOC 24B2XHS</td>
+								<td class="text-right">
+									<a class="btn btn-sm btn-outline-danger" data-bs-toggle="modal"
+										data-bs-target="#deleteModal" href="#"><i class="fa fa-archive"></i> Retirer</a>
+									<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i>
+										Modifier</a>
+									<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i>
+										Caractéristiques</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-danger">Retiré</td>
+								<td>Péripheriques & composants</td>
+								<td>Ecrans d'ordinateur</td>
+								<td>AOC 24B3XHS</td>
+								<td class="text-right">
+									<a class="btn btn-sm btn-outline-success" href="#"><i
+											class="fa fa-check-square"></i> Remettre</a>
+									<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i>
+										Modifier</a>
+									<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i>
+										Caractéristiques</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-muted">En attente</td>
+								<td>Péripheriques & composants</td>
+								<td>Ecrans d'ordinateur</td>
+								<td>AOC 24B4XHS</td>
+								<td class="text-right">
+									<a class="btn btn-sm btn-outline-success" href="#"><i
+											class="fa fa-check-square"></i> Mettre en boutique</a>
+									<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-pencil"></i>
+										Modifier</a>
+									<a class="btn btn-sm btn-outline-secondary" href="#"><i class="fa fa-tags"></i>
+										Caractéristiques</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<nav>
+						<ul class="pagination justify-content-center">
+							<li class="page-item disabled"><span class="page-link"><i
+										class="fa fa-chevron-left"></i></span></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><span class="page-link">2</span></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">4</a></li>
+							<li class="page-item"><a class="page-link" href="#">5</a></li>
+							<li class="page-item"><a class="page-link" href="#"><i class="fa fa-chevron-right"></i></a>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+			</main>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-danger" id="exampleModalLabel"><i class="fa fa-archive"></i> Retrait
+						d'un produit</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Attention, le produit ne sera plus visible sur le site
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-danger">Retirer le produit de la boutique</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'
+		integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL'
+		crossorigin='anonymous'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$(document).ready(function () {
+			var d = new Date();
+			var n = d.getHours();
+
+			if (n > 17 || n < 8) {
+				$("body").addClass("dark-mode");
+			} else {
+			}
+			let click = 0;
+			$('#dark-mode').click(function () {
+				if (click == 0) {
+					$("body").addClass("dark-mode");
+					$("#dark-mode").addClass("white");
+					click = 1;
+				}
+				else {
+					$("body").removeClass("dark-mode");
+					$("#dark-mode").removeClass("white");
+					click = 0;
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+:root {
+    --max-width: 1140px;
+    --font-text: 'Open Sans', sans-serif;
+    --font-title: 'Raleway', sans-serif;
+    --size-text: 1.5rem;
+    --size-title-1: 3.6rem;
+    --size-title-2: 3.6rem;
+    --size-title-3: 2.4rem;
+    --size-title-4: 2.2rem;
+    --line-height: 2.0rem;
+    --color-body: #eee;
+    --color-main: #fff;
+    --color-card: #eee;
+    --color-title: #333;
+    --color-header-text: #e2f7ff;
+    --color-header-link: #fff;
+    --color-header-link-hover: #111;
+    --color-text: #555;
+    --color-link: #0c6588;
+    --color-link-hover: #111;
+    --color-menu: #e2f7ff;
+    --color-menu-link: #0c6588;
+    --color-header: #0c6588;
+    --color-header-title: #fff;
+    --color-footer: #333;
+    --color-footer-title: #fff;
+    --color-footer-text: #ddd;
+    --color-footer-link: #eee;
+    --color-footer-link-hover: #fff;
+    --border-sm: 1px solid #eee;
+    --border-md: 1px solid #ddd;
+    --border-lg: 2px solid #ccc;
+    --shadow-sm: 0 0 1px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 0 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 0 5px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 10px 20px rgba(0, 0, 0, 0.5);
+    --keywords-box-shadow: rgba(0, 0, 0, 0.2);
+    --keywords-box-shadow-hover: rgba(0, 0, 0, 0.4);
+    --keywords-box-shadow-active: rgba(0, 0, 0, 0.6);
+    --keywords-box-shadow-focus: rgba(0, 0, 0, 0.8);
+    --keywords-box-shadow-disabled: rgba(0, 0, 0, 0.1);
+    --keywords-box-shadow-invalid: rgba(255, 0, 0, 0.4);
+    --keywords-box-shadow-after: rgba(0, 0, 0, 0.3) inset;
+    --keywords-box-shadow-after-hover: rgba(0, 0, 0, 0.5) inset;
+}
+
+/*  Variable Bootstrap */
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+.line-large {
+    --size-text: 1.6rem;
+    --line-height: 3.0rem;
+}
+
+.line-small {
+    --size-text: 1.2rem;
+    --line-height: 1.5rem;
+}

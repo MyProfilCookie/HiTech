@@ -1,0 +1,86 @@
+@media screen and (min-width: 960px) {
+	.float-left {
+		width: 48%;
+		margin-right: 4%;
+	}
+
+	.float-right {
+		width: 48%;
+		margin-left: 4%;
+	}
+	.screen {
+		width: 100%;
+		margin-right: 4%;
+	}
+    .sy-controls {
+		bottom: 4.5rem;
+	}
+	.sy-controls li {
+		width: 10%;
+    }
+    .header .logo {
+		text-align: left;
+	}
+
+	.header .logo img {
+		float: left;
+		margin-right: 1em;
+	}
+
+	.header .toolbar {
+		justify-content: flex-end;
+		margin-top: 0;
+	}
+    .product .technical-features>div {
+		flex-direction: row;
+	}
+
+	.product .technical-features table {
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 860) {
+    .gallery--right {
+		flex-direction: row;
+	}
+
+	.gallery--left {
+		flex-direction: row-reverse;
+	}
+
+	.gallery--left>ul,
+	.gallery--right>ul {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.show-mobile {
+		display: initial;
+	}
+
+}
+
+@media screen and (min-width: 960px) {
+	.show-tablette {
+		display: initial;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.hide-sm {
+		display: none;
+	}
+    .menu div {
+		flex-direction: row;
+	}
+    .table-of-contents a {
+		display: inline-block;
+	}
+
+	.table-of-contents a+a {
+		margin-left: 2em;
+	}
+}
